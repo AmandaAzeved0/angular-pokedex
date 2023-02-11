@@ -1,7 +1,7 @@
 <!-- o pokemon-card sera chamado uma vez para cada item o array pokemons -->
 <div class="pokemon-list">
-<app-pokemon-card style="display:flex" *ngFor="let pokemon of pokemons; index as i"
-                  [pokemon]="pokemon"
+<app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons; index as i"
+                  pokemon="{{pokemon['name']}}"
                   [id]="i+1"
 >
 </app-pokemon-card>
